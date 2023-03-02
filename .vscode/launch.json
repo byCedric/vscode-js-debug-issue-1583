@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "attach",
+      "name": "Attach to Expo app",
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "http://localhost:8081",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "http://localhost:8081/(.*).bundle": "${workspaceFolder}/$1.(js|ts|jsx|tsx)",
+      },
+      // Find this value on `http://localhost:8081/json/list`
+      // Use the `webSocketDebuggerUrl` property on the item with:
+      //   "title": "React Native Experimental (Improved Chrome Reloads)",
+      "websocketAddress": "ws://[::1]:8081/inspector/debug?device=0&page=-1",
+      "attachExistingChildren": true,
+      "restart": true,
+      "pauseForSourceMap": true,
+      "trace": true
+    }
+  ]
+}
